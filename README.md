@@ -64,3 +64,8 @@ Currently TuffPython supports:
 - More languages
 - Reverse Python-to-TuffPython support
 - Implementing the system for more programming languages (TuffRust?)
+
+# Syntax stuff
+- For aliases, the first time a non-reserved keyword is mentioned with {} after it, an alias is registered. Example: `nombre{name} = "Jay"` (The transpiled code will call `nombre` `Jay`
+- Also, aliases can be used on any identifier pretty much, which includes functions and library names. This means that you can import functions and call them whatever name you want
+- Translated strings: `@<language-code>" String text ... "`. Language codes are the same as the supported languages of TuffPython, and includes `en` for English. Example: `@en"Bonjour"` (Will become "Hello"). By default, it translates from whatever language you are coding in. To auto-detect a language, use `@@<language-code>" String text ... "`
