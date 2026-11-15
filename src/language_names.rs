@@ -23,6 +23,16 @@ impl Language {
         }
     }
 
+    pub fn translation_code(self) -> &'static str {
+        match self {
+            Self::French => "fr",
+            Self::Spanish => "es",
+            Self::Hindi => "hi",
+            Self::Marathi => "mr",
+            Self::Chinese => "zh",
+        }
+    }
+
     pub fn import_word(self) -> &'static str {
         match self {
             Self::French => "importez",
